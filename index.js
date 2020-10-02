@@ -1,12 +1,13 @@
-// require inquire, fs, util, and import generateMarkdown
+// require inquire, fs, and util
 const inquirer = require("inquirer");
 const fs = require("fs")
 const util = require("util")
 
+// imports generateMarkdown function
 const generateMarkdown = require("./utils/generateMarkdown")
 
+// changes writeFileAsync to a function that requires promises
 const writeFileAsync = util.promisify(fs.writeFile)
-
 
 // array of questions for user
 const questions = [
@@ -19,7 +20,7 @@ const questions = [
 
     {
         type: "input",
-        message: "What is the description of your application?",
+        message: "Give a description of your application.",
         name: "description"
     },
 
@@ -65,7 +66,6 @@ const questions = [
         name: "email"
     },
 
-
 ];
 
 // function to write README file
@@ -79,6 +79,7 @@ function init() {
     .prompt(questions)
     .then(function(response) {
         writeToFile(response)
+        console.log("Congratulations! You have successfully written a README file that can be found in this folder at README.md. Thank you for using the README generator!")
     })
 
 
