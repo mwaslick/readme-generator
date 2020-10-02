@@ -8,6 +8,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Screenshots](#screenshots)
   * [License](#license)
   * [Questions](#questions)
 
@@ -18,6 +19,22 @@
  
  When the application is run by using "node index.js", the user is presented with a series of prompts using inquirer.js. These prompts ask the user to subsequently type in their project's title, description, installation instructions, usage instructions, license information, directions for contributing, directions for texts, GitHub username, and e-mail address. After the user has finished typing the information for one prompt, they can press "enter", and will be presented with the next prompt. Once the user has answered all of the README prompts, the program will generate a formatted Markdown code using text from the user's answers, which will be displayed in the README under their respective sections. The generator then writes this code to a file entitled "README.md", and a message stating the README was generated successfully will be logged to the console.
 
+ You can also view an instructional video on how to use the application [here](https://drive.google.com/file/d/1mAcbpCE6_zyx4liS264hSHHias8IOrfv/view?usp=sharing)!
+
+ ## Screenshots
+
+The README Generator beginning to ask the user its prompts
+
+![An image of the README Generator in the VSCode terminal, prompting what the name and description of the application are](./images/questionsexample.png)
+ 
+Images of the generator when it has finished generating prompts for the user and sends the message stating the README has been written
+
+![An image of all of the prompts on the generator being filled out in the VSCode terminal, with a message that tells the user their README has been successfully written to README.md](./images/questionsterminal.png)
+
+An example of a fully generated README written by the program
+
+![A screenshot of the README in the VSCode window and in a fully formatted preview window beside it](./images/readmefile.png)
+ 
  ## License
  
  MIT License
